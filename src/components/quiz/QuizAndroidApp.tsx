@@ -676,7 +676,7 @@ export const QuizAndroidApp = () => {
 
   return (
     <div className="px-0 md:px-4">
-      <div className="app-shell">
+      <div className="app-shell h-screen md:h-[820px]">
         <header className="flex items-center justify-between px-5 pb-3 pt-5">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Quiz interativo</p>
@@ -688,9 +688,9 @@ export const QuizAndroidApp = () => {
           </div>
         </header>
 
-        <main className="flex-1 overflow-y-auto px-5 pb-6">{renderScreen()}</main>
+        <main className="min-h-0 flex-1 overflow-y-auto px-5 pb-28">{renderScreen()}</main>
 
-        <nav className="bottom-nav">
+        <nav className="bottom-nav absolute inset-x-0 bottom-0 z-20">
           <div className="flex items-center gap-2 rounded-[1.65rem] border border-border bg-card/80 p-2 shadow-soft backdrop-blur-xl">
             {navItems.map((item) => {
               const Icon = item.icon;
