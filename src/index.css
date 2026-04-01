@@ -139,15 +139,18 @@ All colors MUST be HSL.
 
 @layer components {
   .app-shell {
-    @apply relative mx-auto flex min-h-screen w-full max-w-md flex-col overflow-hidden rounded-none border-border bg-surface/90 shadow-float backdrop-blur-xl md:my-6 md:min-h-[820px] md:rounded-[2rem] md:border md:shadow-float;
+    @apply relative mx-auto flex min-h-screen w-full max-w-md flex-col overflow-hidden rounded-none border-border shadow-float backdrop-blur-xl md:my-6 md:min-h-[820px] md:rounded-[2rem] md:border md:shadow-float;
+    background-color: hsl(var(--surface) / 0.9);
   }
 
   .surface-card {
-    @apply rounded-xl border border-border bg-card/92 p-4 shadow-soft backdrop-blur-sm;
+    @apply rounded-xl border border-border p-4 shadow-soft backdrop-blur-sm;
+    background-color: hsl(var(--card) / 0.92);
   }
 
   .surface-card-strong {
-    @apply rounded-xl border border-border bg-surface-strong/95 p-4 shadow-inset;
+    @apply rounded-xl border border-border p-4 shadow-inset;
+    background-color: hsl(var(--surface-strong) / 0.95);
   }
 
   .hero-panel {
@@ -155,11 +158,13 @@ All colors MUST be HSL.
   }
 
   .settings-row {
-    @apply flex items-center justify-between gap-4 rounded-xl border border-border bg-card/86 p-4 shadow-soft;
+    @apply flex items-center justify-between gap-4 rounded-xl border border-border p-4 shadow-soft;
+    background-color: hsl(var(--card) / 0.86);
   }
 
   .bottom-nav {
-    @apply border-t border-border bg-surface/95 px-3 pb-5 pt-3 backdrop-blur-xl;
+    @apply border-t border-border px-3 pb-5 pt-3 backdrop-blur-xl;
+    background-color: hsl(var(--surface) / 0.95);
   }
 
   .nav-pill {
@@ -171,19 +176,23 @@ All colors MUST be HSL.
   }
 
   .quiz-option {
-    @apply flex w-full items-start gap-3 rounded-xl border border-border bg-card/92 px-4 py-3 text-left text-sm font-medium text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+    @apply flex w-full items-start gap-3 rounded-xl border border-border px-4 py-3 text-left text-sm font-medium text-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+    background-color: hsl(var(--card) / 0.92);
   }
 
   .quiz-option[data-state="correct"] {
-    @apply border-success bg-success/12 text-foreground;
+    @apply border-success text-foreground;
+    background-color: hsl(var(--success) / 0.12);
   }
 
   .quiz-option[data-state="wrong"] {
-    @apply border-destructive bg-destructive/10 text-foreground;
+    @apply border-destructive text-foreground;
+    background-color: hsl(var(--destructive) / 0.1);
   }
 
   .quiz-option[data-state="neutral-selected"] {
-    @apply border-primary bg-primary/10;
+    @apply border-primary;
+    background-color: hsl(var(--primary) / 0.1);
   }
 }
 
