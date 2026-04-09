@@ -292,8 +292,8 @@ export const QuizAndroidApp = () => {
           <div className="relative space-y-4">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-sm font-semibold text-primary-foreground/80">Quiz Quest</p>
-                <h1 className="max-w-52 text-3xl leading-tight">Seu quiz diário com clima de app Android.</h1>
+                <p className="text-sm font-semibold text-primary-foreground/80">QuizUp B2</p>
+                <h1 className="max-w-52 text-3xl leading-tight">Teste seus conhecimentos de forma divertida!</h1>
               </div>
               <div className="rounded-2xl bg-primary-foreground/14 px-3 py-2 text-right backdrop-blur">
                 <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/70">Nível</p>
