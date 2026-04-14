@@ -274,9 +274,18 @@ export const QuizAndroidApp = () => {
   }, [activeTab, answerState, resultEntry, settings.timerEnabled, timeLeft]);
 
   useEffect(() => {
-    mainContentRef.current?.scrollTo({ top: 0, left: 0, behavior: "auto" });
-    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-  }, [activeTab, resultEntry]);
+    if (!isHydrated) return;
+
+    const resetScrollPosition = () => {
+      mainContentRef.current?.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    };
+
+    resetScrollPosition();
+    const frameId = window.requestAnimationFrame(resetScrollPosition);
+
+    return () => window.cancelAnimationFrame(frameId);
+  }, [activeTab, isHydrated, resultEntry]);
 
   const modalIsBlocking = isHydrated && !acceptedTerms;
 
@@ -681,8 +690,8 @@ export const QuizAndroidApp = () => {
   }
 
   return (
-    <div className="px-0 md:px-4">
-      <div className="app-shell h-screen md:h-[820px]">
+    <div className="min-h-screen overflow-hidden md:flex md:items-center md:justify-center md:px-4 md:py-6">
+      <div className="app-shell h-[100dvh] md:h-[calc(100dvh-3rem)] md:max-h-[820px]">
         <header className="flex items-center justify-between px-5 pb-3 pt-5">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Quiz interativo</p>
