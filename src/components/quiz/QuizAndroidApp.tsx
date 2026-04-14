@@ -695,7 +695,7 @@ export const QuizAndroidApp = () => {
         <header className="flex items-center justify-between px-5 pb-3 pt-5">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">Quiz interativo</p>
-            <p className="text-lg font-semibold">Protótipo Android-like</p>
+            <p className="text-lg font-semibold">QuizUp B2</p>
           </div>
           <div className="rounded-2xl border border-border bg-card/90 px-3 py-2 shadow-soft">
             <p className="text-[0.65rem] uppercase tracking-[0.16em] text-muted-foreground">XP total</p>
