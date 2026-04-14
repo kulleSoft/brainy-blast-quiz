@@ -139,7 +139,7 @@ All colors MUST be HSL.
 
 @layer components {
   .app-shell {
-    @apply relative mx-auto flex min-h-screen w-full max-w-md flex-col overflow-hidden rounded-none border-border shadow-float backdrop-blur-xl md:my-6 md:min-h-[820px] md:rounded-[2rem] md:border md:shadow-float;
+    @apply relative mx-auto flex h-full min-h-0 w-full max-w-md flex-col overflow-hidden rounded-none border-border shadow-float backdrop-blur-xl md:rounded-[2rem] md:border md:shadow-float;
     background-color: hsl(var(--surface) / 0.9);
   }
 
